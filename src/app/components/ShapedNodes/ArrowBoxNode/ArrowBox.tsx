@@ -47,7 +47,7 @@ const ArrowBoxDiv = styled.div`
 		padding: 10px;
 		/* background-color: tomato; */
 		position: absolute;
-		z-index: 1;
+		/* z-index: 1; */
 
 		p {
 			color: #ffffff;

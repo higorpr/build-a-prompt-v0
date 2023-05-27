@@ -3,29 +3,20 @@ import { DragEvent } from "react";
 import styled from "styled-components";
 
 export default function ParallelogramSvg(props: SVGCustomProps) {
-	const completeWidth = Number(props.width);
-	const horizontalLineXCoord = Number(props.width) * 0.8;
-	const YPointCoord = Number(props.height);
 	return (
-		<TestDiv draggable width={`${props.width}px`}>
-			<svg
-				width={props.width}
-				height={props.height}
-				style={{ overflow: "visible" }}
-			>
-				<path
-					d={`M0,${YPointCoord} L${
-						completeWidth - horizontalLineXCoord
-					},0 L${completeWidth},0 L${horizontalLineXCoord},${YPointCoord}`}
-					fill={props.color}
-					// stroke-width="2"
-					// stroke="#fff"
-				></path>
-			</svg>
+		<TestDiv draggable>
+			<DrawingDiv></DrawingDiv>
 		</TestDiv>
 	);
 }
 
-const TestDiv = styled.div`
+const TestDiv = styled.div``;
+
+const DrawingDiv = styled.div`
+	height: 60px;
 	width: 130px;
+	border-radius: 5px;
+	border: 1.5px solid #eee;
+	transform: skew(30deg);
+	background-color: #000;
 `;

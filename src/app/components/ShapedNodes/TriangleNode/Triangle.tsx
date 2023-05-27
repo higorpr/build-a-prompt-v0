@@ -30,14 +30,14 @@ export default function Triangle({ data, isConnectable }) {
 const TriangleDiv = styled.div`
 	width: 0;
 	height: 0;
-	border-top: 40px solid transparent;
-	border-bottom: 40px solid transparent;
+	border-top: 30px solid transparent;
+	border-bottom: 30px solid transparent;
 	border-left: 72px solid black;
 
 	label {
 		/* background-color: red; */
 		width: 60px;
-		height: 80px;
+		height: 55px;
 		display: flex;
 		text-align: center;
 		align-items: center;
@@ -47,7 +47,7 @@ const TriangleDiv = styled.div`
 		position: absolute;
 		padding: 5px;
 		top: 0px;
-		left: 0px;
+		left: -5px;
 		/* background-color: red; */
 
 		p {

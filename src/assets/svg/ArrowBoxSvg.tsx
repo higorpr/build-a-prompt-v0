@@ -12,13 +12,7 @@ export default function ArrowBoxSvg(props: SVGCustomProps) {
 				style={{ overflow: "visible" }}
 			>
 				<path
-					d={`M0,0 L${horizontalLineXCoord},0  L${
-						props.width
-					},${middlePointYCoord} L${horizontalLineXCoord},${
-						props.height
-					} L0,${props.height} L${
-						props.width - horizontalLineXCoord
-					},${middlePointYCoord} z`}
+					d={`M0,0 L${horizontalLineXCoord},0  L${props.width},${middlePointYCoord} L${horizontalLineXCoord},${props.height} L0,${props.height}  z`}
 					fill={props.color}
 				></path>
 			</svg>
