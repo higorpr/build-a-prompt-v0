@@ -37,70 +37,70 @@ function getId() {
 }
 
 const initialNodes = [
-	// {
-	// 	id: "1",
-	// 	type: "rectangle",
-	// 	position: { x: 100, y: 300 },
-	// 	data: { label: "Node 1" },
-	// 	parentNode: "9",
-	// },
-	// {
-	// 	id: "2",
-	// 	type: "rectangle",
-	// 	position: { x: 250, y: 300 },
-	// 	data: { label: "Node 2" },
-	// 	parentNode: "9",
-	// },
-	// {
-	// 	id: "3",
-	// 	type: "ellipse",
-	// 	position: { x: 100, y: 0 },
-	// 	data: { label: "Node 3" },
-	// },
-	// {
-	// 	id: "4",
-	// 	type: "rectangle",
-	// 	position: { x: 250, y: 0 },
-	// 	data: { label: "Node 4" },
-	// },
-	// {
-	// 	id: "5",
-	// 	type: "arrow",
-	// 	position: { x: 400, y: 0 },
-	// 	data: {
-	// 		label: "Node 5",
-	// 	},
-	// },
-	// {
-	// 	id: "6",
-	// 	type: "document",
-	// 	position: { x: 100, y: 150 },
-	// 	data: { label: "Node 6" },
-	// },
-	// {
-	// 	id: "7",
-	// 	type: "triangle",
-	// 	position: { x: 250, y: 150 },
-	// 	data: { label: "Node 7 (Chat GPT)" },
-	// },
-	// {
-	// 	id: "8",
-	// 	type: "parallelogram",
-	// 	position: { x: 400, y: 150 },
-	// 	data: { label: "Node 8" },
-	// },
-	// {
-	// 	id: "9",
-	// 	type: "group",
-	// 	data: { label: "Group A" },
-	// 	position: { x: -100, y: 0 },
-	// 	className: "light",
-	// 	style: {
-	// 		backgroundColor: "rgba(255,0,0,0.2)",
-	// 		width: 130,
-	// 		height: 300,
-	// 	},
-	// },
+	{
+		id: "1",
+		type: "rectangle",
+		position: { x: 100, y: 300 },
+		data: { label: "Node 1" },
+		parentNode: "9",
+	},
+	{
+		id: "2",
+		type: "rectangle",
+		position: { x: 250, y: 300 },
+		data: { label: "Node 2" },
+		parentNode: "9",
+	},
+	{
+		id: "3",
+		type: "ellipse",
+		position: { x: 100, y: 0 },
+		data: { label: "Node 3" },
+	},
+	{
+		id: "4",
+		type: "rectangle",
+		position: { x: 250, y: 0 },
+		data: { label: "Node 4" },
+	},
+	{
+		id: "5",
+		type: "arrow",
+		position: { x: 400, y: 0 },
+		data: {
+			label: "Node 5",
+		},
+	},
+	{
+		id: "6",
+		type: "document",
+		position: { x: 100, y: 150 },
+		data: { label: "Node 6" },
+	},
+	{
+		id: "7",
+		type: "triangle",
+		position: { x: 250, y: 150 },
+		data: { label: "Node 7 (Chat GPT)" },
+	},
+	{
+		id: "8",
+		type: "parallelogram",
+		position: { x: 400, y: 150 },
+		data: { label: "Node 8" },
+	},
+	{
+		id: "9",
+		type: "group",
+		data: { label: "Group A" },
+		position: { x: -100, y: 0 },
+		className: "light",
+		style: {
+			backgroundColor: "rgba(255,0,0,0.2)",
+			width: 130,
+			height: 300,
+		},
+	},
 ];
 const initialEdges = [
 	// {
@@ -170,6 +170,7 @@ export default function Home() {
 
 			setNodes((nds) => nds.concat(newNode));
 		},
+		// eslint-disable-next-line
 		[reactFlowInstance]
 	);
 	return (
@@ -178,7 +179,7 @@ export default function Home() {
 			<ReactFlowProvider>
 				<ShapesBar />
 				<div
-					style={{ width: "100%", height: "90vh" }}
+					style={{ width: "100%", height: "88vh" }}
 					className="reactflow-wrapper"
 					ref={reactFlowWrapper}
 				>
@@ -195,7 +196,7 @@ export default function Home() {
 						onDrop={onDrop}
 						defaultEdgeOptions={{ type: "step" }}
 						// connectionLineType="step"
-						// fitView
+						fitView
 					>
 						<Controls />
 						<Background color="#ccc" variant={background} />
